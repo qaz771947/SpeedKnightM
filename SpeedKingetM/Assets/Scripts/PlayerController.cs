@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("doAttack");
             }
-            if (inputController.left == true && inputController.right == false && transform.position.x == 1.81f)//往左
+            if (inputController.left == true && inputController.right == false && transform.position.x == 0.84f)//往左
             {
 
                 if (transform.rotation.y != 0f) //角色要面向目標物
@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
 
-                transform.position = new Vector2(-1.81f, transform.position.y);
+                transform.position = new Vector2(-0.84f, transform.position.y);
             }
 
-            if (inputController.left == false && inputController.right == true && transform.position.x != 1.81f)//往右
+            if (inputController.left == false && inputController.right == true && transform.position.x != 0.84f)//往右
             {
 
                 if (transform.rotation.y != 180) //角色要面向目標物
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                 }
 
-                transform.position = new Vector2(1.81f, transform.position.y);
+                transform.position = new Vector2(0.84f, transform.position.y);
             }
         }
 
